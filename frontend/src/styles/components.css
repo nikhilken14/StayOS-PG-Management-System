@@ -1,0 +1,44 @@
+.app{height:100vh;display:flex;flex-direction:column;overflow:hidden;background:var(--bg)}
+.body-layout{flex:1;display:flex;min-height:0;overflow:hidden}
+.page-container{flex:1;min-width:0;overflow:hidden}
+.content{height:100%;overflow-y:auto;overflow-x:hidden;padding:28px 32px;scroll-behavior:smooth;background:#f4f6fb}
+
+.navbar{height:76px;flex-shrink:0;position:relative;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:#fff;border-bottom:1px solid #e8ebf2}
+.navbar-context,.navbar-right{display:flex;align-items:center;gap:15px}
+.navbar-context strong{display:block;color:#172033;font-size:14px;font-weight:650}
+.nav-eyebrow{display:block;color:#98a2b3;font-size:9px;font-weight:750;letter-spacing:1.25px;margin-bottom:2px}
+.menu-toggle{width:38px;height:38px;border-radius:11px;color:#475467;font-size:22px;display:grid;place-items:center;transition:background .2s,color .2s}
+.menu-toggle:hover{background:#f0f2f8;color:var(--primary)}
+.calendar-btn{height:40px;padding:0 13px;border:1px solid #e7eaf1;border-radius:10px;background:#fff;color:#475467;display:flex;align-items:center;gap:8px;font-size:13px}
+.calendar-btn:hover{background:#f7f8fc;color:var(--primary);border-color:#d8def1}
+.nav-avatar{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#e9edff;color:#3654c5;font-weight:700;font-size:13px}
+
+.sidebar{width:258px;height:100%;background:#12134f;color:#c8c9e5;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;overflow-y:auto;flex-shrink:0;transition:width .22s ease;border-right:0}
+.sidebar.open{width:258px}.sidebar.close{width:76px}
+.sidebar-top{min-height:0}
+.sidebar-brand{height:76px;padding:0 22px;display:flex;align-items:center;gap:12px;border-bottom:1px solid rgba(255,255,255,.09);color:white}
+.brand-mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(145deg,#788bff,#4357d2);display:grid;place-items:center;color:white;font-size:18px;flex-shrink:0}
+.brand-name{font-size:19px;font-weight:750;letter-spacing:-.5px;color:#fff;white-space:nowrap}
+.brand-name small{display:block;font-size:8px;letter-spacing:1.55px;color:#9699d2;margin-top:-2px}
+.sidebar-menu{display:flex;flex-direction:column;gap:4px;padding:15px 12px 8px}
+.nav-group{display:flex;flex-direction:column;gap:3px;margin-bottom:11px}
+.nav-group-title{padding:10px 12px 6px;color:#787aaa;font-size:9px;font-weight:750;letter-spacing:1.1px}
+.sidebar a{display:flex;align-items:center;gap:13px;padding:10px 12px;min-height:40px;border-radius:9px;color:#b5b7d7;font-size:13px;font-weight:500;text-decoration:none;transition:background .16s,color .16s;white-space:nowrap}
+.sidebar a i{font-size:16px;width:19px;text-align:center;flex-shrink:0}
+.sidebar a:hover{background:rgba(255,255,255,.08);color:#fff}
+.sidebar a.active{color:#fff;background:#3c5fe0;box-shadow:0 5px 14px rgba(27,48,155,.28)}
+.sidebar-bottom{padding:10px 12px 18px;border-top:1px solid rgba(255,255,255,.09);display:flex;flex-direction:column;gap:3px}
+.sidebar.close .sidebar-brand{padding:0;justify-content:center}
+.sidebar.close .sidebar-menu{padding-left:10px;padding-right:10px}
+.sidebar.close .sidebar a{justify-content:center;padding-left:8px;padding-right:8px}
+.sidebar.close .sidebar a span,.sidebar.close .nav-group-title{display:none}
+.sidebar.close .nav-group{margin-bottom:8px}
+.sidebar.close .sidebar-bottom{padding-left:10px;padding-right:10px}
+.calendar-dropdown{position:absolute;right:27px;top:65px;z-index:9999;background:#fff;border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow-md);animation:calendarShow .18s ease}
+@keyframes calendarShow{from{opacity:0;transform:translateY(-7px)}to{opacity:1;transform:translateY(0)}}
+.content::-webkit-scrollbar,.sidebar::-webkit-scrollbar{width:7px}
+.content::-webkit-scrollbar-thumb{background:#cbd2df;border-radius:20px}
+.sidebar::-webkit-scrollbar-thumb{background:rgba(255,255,255,.18);border-radius:20px}
+
+@media(max-width:800px){.content{padding:19px 17px}.navbar{height:66px;padding:0 17px}.nav-eyebrow{display:none}.navbar-context strong{font-size:13px}.sidebar.open{width:230px}}
+@media(max-width:520px){.sidebar.open{width:204px}.calendar-btn{width:40px;justify-content:center;padding:0}.calendar-btn span{display:none}.nav-avatar{width:33px;height:33px}.navbar-context{gap:8px}}

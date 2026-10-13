@@ -1,0 +1,61 @@
+/* StayOS reference video: sidebar and layout styling only.
+   CalendarPopup.jsx, CalendarPopup.css and Navbar.jsx intentionally unchanged. */
+:root{
+  --primary:#3469e8;--primary-hover:#2856cb;--primary-light:#eaf0ff;
+  --bg:#f5f7fb;--card:#ffffff;--surface:#ffffff;
+  --border:#e8edf4;--heading:#152342;--text:#344461;--muted:#8390a7;
+  --shadow:0 6px 24px rgba(23,43,88,.045);
+}
+.app,.body-layout{background:var(--bg)}
+.sidebar,.sidebar.open,.sidebar.close{
+  width:232px!important;min-width:232px!important;
+  background:#10194f!important;border-right:1px solid rgba(255,255,255,.07)!important;
+  box-shadow:none!important;display:flex;flex-direction:column;
+  overflow:hidden;height:100dvh;
+}
+.sidebar-brand,.sidebar.close .sidebar-brand{
+  height:73px;min-height:73px;padding:0 19px!important;
+  background:transparent!important;border-bottom:1px solid rgba(255,255,255,.09);
+  justify-content:flex-start!important;text-decoration:none;
+}
+.brand-mark{width:36px;height:36px;border-radius:10px;background:#305eda!important;box-shadow:none}
+.brand-name{font-size:19px;letter-spacing:-.5px}
+.brand-name small{color:#8a9bc5!important;letter-spacing:1.35px;font-size:8px}
+.workspace-label{margin:15px 12px 8px;padding:11px;border-radius:10px;
+  background:#1a285c!important;border:1px solid #2b3b71!important;flex-shrink:0}
+.workspace-initial{background:#345dce;color:#fff}
+.workspace-label strong{color:#f1f5ff}.workspace-label small{color:#a5b1d3!important}
+.sidebar-menu,.sidebar.close .sidebar-menu{flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;padding:6px 11px 18px!important;scrollbar-width:thin;scrollbar-color:#364477 transparent}
+.nav-group{margin-bottom:9px;gap:2px}
+.nav-group-title,.sidebar.close .nav-group-title{display:block!important;color:#798dc2!important;padding:17px 10px 7px;font-size:10px;letter-spacing:1.1px}
+.sidebar a:not(.sidebar-brand),.sidebar.close .sidebar a:not(.sidebar-brand),.sidebar-signout{
+  min-height:38px;display:flex;align-items:center;justify-content:flex-start!important;
+  border-radius:7px;padding:9px 11px!important;gap:12px;
+  font-size:12px;font-weight:500;color:#b8c4e7;letter-spacing:.05px;
+  background:transparent;text-decoration:none;border:0;width:100%;text-align:left;
+}
+.sidebar a i,.sidebar-signout i{font-size:15px;width:19px;flex-shrink:0;text-align:center;color:#a4b5e2}
+.sidebar a:hover:not(.sidebar-brand),.sidebar-signout:hover{background:#202f70!important;color:#fff!important}
+.sidebar a.active:not(.sidebar-brand){background:#3565df!important;color:#fff!important;box-shadow:none!important}
+.sidebar a.active i{color:#fff}
+.sidebar-bottom{background:#10194f!important;padding:11px 11px 15px!important;flex-shrink:0;border-top:1px solid rgba(255,255,255,.12);gap:3px}
+.sidebar-signout{cursor:pointer;font-family:inherit}
+.sidebar.close .sidebar a span{display:inline!important}
+.navbar{height:72px!important;min-height:72px;background:#fff;border-bottom:1px solid #e9edf5;box-shadow:none!important;padding-inline:clamp(18px,2.7vw,44px)}
+.navbar-context strong{color:#162344;font-weight:750}
+.page-container{background:var(--bg)}
+.content{background:var(--bg)!important;padding:clamp(18px,2.5vw,34px)!important}
+.content>.content{padding:0!important}
+.ref-panel,.ref-metric,.team-panel,.owner-card,.dashboard-card{
+  background:#fff;border:1px solid #e8edf3!important;border-radius:15px!important;
+  box-shadow:0 8px 26px rgba(29,45,91,.04)!important;
+}
+.primary-button{background:#3565df!important}
+@media (max-width:900px){
+  .sidebar,.sidebar.close,.sidebar.open{position:fixed!important;left:0;top:0;bottom:0;z-index:1100;width:232px!important;min-width:232px!important;transition:transform .22s ease!important}
+  .sidebar.close{transform:translateX(-100%)!important}.sidebar.open{transform:translateX(0)!important}
+  .mobile-overlay{display:block;position:fixed;inset:0;z-index:1050;background:rgba(9,17,44,.55);border:0;width:100%}
+  .menu-toggle{display:grid}.content{padding:18px!important}
+}
+@media (min-width:901px){.mobile-overlay{display:none!important}}
+@media (max-width:520px){.navbar{height:64px!important;min-height:64px}.content{padding:14px!important}}

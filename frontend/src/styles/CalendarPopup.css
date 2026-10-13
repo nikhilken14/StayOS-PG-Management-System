@@ -1,0 +1,716 @@
+/* =========================
+CALENDAR CONTAINER
+========================= */
+
+.calendar-container {
+
+    width:100%;
+
+    max-width:500px;
+
+    max-height:85vh;
+
+    overflow-y:auto;
+
+    box-sizing:border-box;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:24px;
+
+    color:var(--text);
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+/* =========================
+HEADER
+========================= */
+
+
+.calendar-top {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:22px;
+
+}
+
+
+
+.calendar-top h2 {
+
+    font-size:1.25rem;
+
+    font-weight:600;
+
+    color:var(--heading);
+
+    margin:0;
+
+}
+
+
+
+
+
+/* =========================
+ADD BUTTON
+========================= */
+
+
+.add-memo-btn {
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:500;
+
+    cursor:pointer;
+
+    transition:.2s ease;
+
+}
+
+
+
+.add-memo-btn:hover {
+
+    background:var(--primary-hover);
+
+    transform:translateY(-1px);
+
+}
+
+
+
+
+
+/* =========================
+REACT CALENDAR
+========================= */
+
+
+.react-calendar {
+
+    width:100%;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    padding:12px;
+
+    font-family:inherit;
+
+}
+
+
+
+.react-calendar button {
+
+    font-family:inherit;
+
+}
+
+
+
+.react-calendar__navigation {
+
+    display:flex;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.react-calendar__navigation button {
+
+    min-width:40px;
+
+    height:36px;
+
+    color:var(--text);
+
+    background:transparent;
+
+    border:none;
+
+    border-radius:8px;
+
+    transition:.2s ease;
+
+}
+
+
+
+.react-calendar__navigation button:hover {
+
+    background:var(--primary-light);
+
+    color:var(--primary);
+
+}
+
+
+
+.react-calendar__navigation button:disabled {
+
+    color:var(--muted);
+
+    background:transparent;
+
+}
+
+
+
+
+
+.react-calendar__month-view__weekdays {
+
+    color:var(--muted);
+
+    font-size:12px;
+
+    font-weight:600;
+
+    text-transform:uppercase;
+
+}
+
+
+
+.react-calendar__month-view__days {
+
+    display:grid !important;
+
+    grid-template-columns:repeat(7,1fr);
+
+}
+
+
+
+
+
+.react-calendar__tile {
+
+    height:42px;
+
+    border-radius:10px;
+
+    border:none;
+
+    background:transparent;
+
+    color:var(--text);
+
+    transition:.2s ease;
+
+}
+
+
+
+.react-calendar__tile:hover {
+
+    background:var(--primary-light);
+
+    color:var(--primary);
+
+}
+
+
+
+.react-calendar__tile:disabled {
+
+    background:transparent;
+
+    color:var(--muted);
+
+}
+
+
+
+
+
+.react-calendar__tile--active {
+
+    background:var(--primary)!important;
+
+    color:white!important;
+
+    font-weight:600;
+
+}
+
+
+
+.react-calendar__tile--now {
+
+    background:var(--primary-light);
+
+    color:var(--primary);
+
+    font-weight:600;
+
+}
+
+
+
+
+
+
+/* =========================
+SELECTED DATE
+========================= */
+
+
+.selected-date {
+
+    margin-top:18px;
+
+    background:var(--sidebar);
+
+    border:1px solid var(--border);
+
+    padding:14px;
+
+    border-radius:14px;
+
+    color:var(--text);
+
+    font-size:14px;
+
+}
+
+
+
+
+
+
+/* =========================
+MEMO EDITOR
+========================= */
+
+
+.memo-editor {
+
+    margin-top:18px;
+
+    background:var(--sidebar);
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    padding:16px;
+
+}
+
+
+
+.memo-editor textarea {
+
+    width:100%;
+
+    height:100px;
+
+    box-sizing:border-box;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    color:var(--text);
+
+    padding:12px;
+
+    resize:none;
+
+    outline:none;
+
+    transition:.2s ease;
+
+}
+
+
+
+.memo-editor textarea::placeholder {
+
+    color:var(--muted);
+
+}
+
+
+
+.memo-editor textarea:focus {
+
+    border-color:var(--primary);
+
+    box-shadow:
+
+    0 0 0 3px rgba(59,130,246,.15);
+
+}
+
+
+
+
+
+
+.memo-actions {
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:14px;
+
+}
+
+
+
+
+
+
+/* =========================
+BUTTONS
+========================= */
+
+
+.save-btn {
+
+    background:var(--primary);
+
+    color:white;
+
+    border:none;
+
+    padding:10px 18px;
+
+    border-radius:10px;
+
+    font-weight:500;
+
+    cursor:pointer;
+
+    transition:.2s ease;
+
+}
+
+
+
+.save-btn:hover {
+
+    background:var(--primary-hover);
+
+}
+
+
+
+
+
+.cancel-btn {
+
+
+    background:var(--surface);
+
+    color:var(--text);
+
+    border:1px solid var(--border);
+
+    padding:10px 18px;
+
+    border-radius:10px;
+
+    font-weight:500;
+
+    cursor:pointer;
+
+    transition:.2s ease;
+
+}
+
+
+
+.cancel-btn:hover {
+
+    background:var(--border);
+
+}
+
+
+
+
+
+
+
+/* =========================
+MEMO LIST
+========================= */
+
+
+.memo-section {
+
+    margin-top:24px;
+
+}
+
+
+
+.memo-section h3 {
+
+    margin-bottom:14px;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    color:var(--heading);
+
+}
+
+
+
+
+
+.memo-card {
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    padding:14px;
+
+    margin-bottom:12px;
+
+    transition:.2s ease;
+
+}
+
+
+
+.memo-card:hover {
+
+    border-color:#CBD5E1;
+
+}
+
+
+
+.memo-card p {
+
+    color:var(--muted);
+
+    line-height:1.5;
+
+    margin-bottom:14px;
+
+}
+
+
+
+
+
+
+
+/* =========================
+ACTION BUTTONS
+========================= */
+
+
+.edit-small {
+
+    border:none;
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:7px 12px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    margin-right:8px;
+
+    transition:.2s ease;
+
+}
+
+
+
+.edit-small:hover {
+
+    background:var(--primary-hover);
+
+}
+
+
+
+
+
+.delete-small {
+
+    border:none;
+
+    background:var(--danger);
+
+    color:white;
+
+    padding:7px 12px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.2s ease;
+
+}
+
+
+
+.delete-small:hover {
+
+    background:#DC2626;
+
+}
+
+
+
+
+
+
+
+/* =========================
+EMPTY STATE
+========================= */
+
+
+.empty {
+
+    text-align:center;
+
+    padding:24px 0;
+
+    color:var(--muted);
+
+    font-size:14px;
+
+}
+
+
+
+
+
+
+
+/* =========================
+SCROLLBAR
+========================= */
+
+
+.calendar-container::-webkit-scrollbar {
+
+    width:6px;
+
+}
+
+
+
+.calendar-container::-webkit-scrollbar-thumb {
+
+    background:#CBD5E1;
+
+    border-radius:999px;
+
+}
+
+
+
+
+
+
+
+/* =========================
+RESPONSIVE
+========================= */
+
+
+@media(max-width:600px){
+
+
+    .calendar-container {
+
+        padding:16px;
+
+        border-radius:16px;
+
+    }
+
+
+
+    .calendar-top h2 {
+
+        font-size:1rem;
+
+    }
+
+
+
+    .react-calendar__tile {
+
+        height:36px;
+
+        font-size:13px;
+
+    }
+
+
+
+    .memo-actions {
+
+        flex-direction:column;
+
+    }
+
+
+
+    .save-btn,
+    .cancel-btn {
+
+        width:100%;
+
+    }
+
+
+}

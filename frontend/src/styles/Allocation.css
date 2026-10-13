@@ -1,0 +1,379 @@
+.allocation-management-page{
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+    max-width:100%;
+}
+
+/* HEADER */
+
+.allocation-management-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.allocation-management-header h1{
+    color:var(--text);
+    font-size:2rem;
+    font-weight:700;
+    margin:0;
+}
+
+.allocation-management-header p{
+    color:var(--muted);
+    margin-top:6px;
+}
+
+.allocation-management-icon{
+    width:56px;
+    height:56px;
+    border-radius:14px;
+    background:rgba(59,130,246,.12);
+    color:var(--primary);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+}
+
+/* CARD */
+
+.allocation-management-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:24px;
+    box-shadow:var(--shadow);
+}
+
+/* TITLE */
+
+.allocation-management-title{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:24px;
+}
+
+.allocation-management-title i{
+    width:42px;
+    height:42px;
+    border-radius:12px;
+    background:rgba(59,130,246,.12);
+    color:var(--primary);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.allocation-management-title h3{
+    margin:0;
+    color:var(--text);
+}
+
+.allocation-management-title p{
+    margin-top:4px;
+    color:var(--muted);
+}
+
+/* FORM */
+
+.allocation-management-form{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:16px;
+}
+
+.allocation-management-form input{
+    background:var(--surface);
+    border:1px solid var(--border);
+    color:var(--text);
+    padding:14px;
+    border-radius:12px;
+    outline:none;
+}
+
+.allocation-management-form input:focus{
+    border-color:var(--primary);
+}
+
+/* BUTTON */
+
+.allocation-management-btn{
+    margin-top:18px;
+    background:var(--primary);
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.allocation-management-btn:hover{
+    background:var(--primary-hover);
+}
+
+/* SEARCH */
+
+.allocation-management-search{
+    display:flex;
+    gap:12px;
+}
+
+.allocation-management-search input{
+    flex:1;
+    background:var(--surface);
+    border:1px solid var(--border);
+    padding:14px;
+    border-radius:12px;
+    color:var(--text);
+}
+
+/* OCCUPANCY */
+
+.allocation-management-occupancy{
+    margin-top:20px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.allocation-management-occupancy div{
+    background:var(--surface);
+    border:1px solid var(--border);
+    padding:18px;
+    border-radius:12px;
+}
+
+.allocation-management-occupancy span{
+    display:block;
+    color:var(--muted);
+    margin-bottom:8px;
+}
+
+.allocation-management-occupancy strong{
+    font-size:20px;
+    color:var(--text);
+}
+
+.success{
+    color:#22c55e !important;
+}
+
+/* SECTION */
+
+.allocation-management-section h2{
+    color:var(--text);
+    margin-bottom:20px;
+}
+
+/* GRID */
+
+.allocation-management-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+/* ITEM */
+
+.allocation-management-item{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:22px;
+    transition:.25s;
+}
+
+.allocation-management-item:hover{
+    transform:translateY(-3px);
+    border-color:var(--primary);
+}
+
+.allocation-management-item-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.allocation-management-item-top h3{
+    margin:0;
+    color:var(--text);
+}
+
+.allocation-active{
+    background:#DCFCE7;
+    color:#16A34A;
+    padding:6px 12px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:600;
+}
+
+/* INFO */
+
+.allocation-management-info{
+    margin:18px 0;
+}
+
+.allocation-management-info p{
+    display:flex;
+    justify-content:space-between;
+    margin:12px 0;
+    color:var(--muted);
+}
+
+.allocation-management-info strong{
+    color:var(--text);
+}
+
+/* DANGER */
+
+.allocation-danger-btn{
+    width:100%;
+    background:var(--danger);
+    color:white;
+    border:none;
+    padding:12px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.allocation-danger-btn:hover{
+    background:#dc2626;
+}
+
+/* =========================
+   ALLOCATION TABLE
+========================= */
+
+.allocation-table-wrapper{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:18px;
+    overflow:hidden;
+    overflow-x:auto;
+    box-shadow:var(--shadow);
+}
+
+.allocation-table{
+    width:100%;
+    min-width:900px;
+    border-collapse:collapse;
+}
+
+.allocation-table thead{
+    background:var(--surface);
+}
+
+.allocation-table th{
+    text-align:left;
+    padding:16px 20px;
+    color:var(--text);
+    font-weight:600;
+    border-bottom:1px solid var(--border);
+}
+
+.allocation-table td{
+    padding:16px 20px;
+    color:var(--muted);
+    border-bottom:1px solid var(--border);
+}
+
+.allocation-table tbody tr{
+    transition:.2s;
+}
+
+.allocation-table tbody tr:hover{
+    background:rgba(59,130,246,.05);
+}
+
+/* =========================
+   ROOM CELL
+========================= */
+
+.allocation-room{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--text);
+    font-weight:600;
+}
+
+.allocation-room i{
+    width:32px;
+    height:32px;
+    border-radius:8px;
+    background:rgba(59,130,246,.12);
+    color:var(--primary);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.allocation-active{
+    display:inline-block;
+    padding:6px 14px;
+    border-radius:999px;
+    background:#DCFCE7;
+    color:#16A34A;
+    font-size:13px;
+    font-weight:600;
+}
+
+/* =========================
+   ACTION BUTTON
+========================= */
+
+.allocation-danger-btn{
+    background:#FEE2E2;
+    color:#DC2626;
+    border:none;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:6px;
+    transition:.2s;
+}
+
+.allocation-danger-btn:hover{
+    background:#FECACA;
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.allocation-empty{
+    text-align:center;
+    padding:40px !important;
+    color:var(--muted);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .allocation-management-header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .allocation-management-search{
+        flex-direction:column;
+    }
+
+    .allocation-management-occupancy{
+        grid-template-columns:1fr;
+    }
+}

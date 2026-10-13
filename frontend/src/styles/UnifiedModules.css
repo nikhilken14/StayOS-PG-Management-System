@@ -1,0 +1,60 @@
+/* StayOS unified module layer. Keep all calendar selectors and behavior untouched. */
+:root{--module-ink:#17264a;--module-muted:#8290ab;--module-blue:#3565df;--module-stroke:#e6ebf4;--module-panel:#fff;--module-radius:15px;--module-shadow:0 8px 28px rgba(18,39,84,.035)}
+.content{max-width:none!important}
+/* Unified headers throughout the operational modules */
+:is(.pg-management-page,.room-page,.res-page,.allocation-management-page,.pay-page,.bill-ui-page,.visitor-page,.rent-container,.complaint-ui-page,.notification-page,.report-page,.movement-page,.team-page,.settings-page,.account-modern){color:var(--module-ink);min-width:0;width:100%;gap:20px}
+:is(.pg-management-header,.room-header,.res-header,.allocation-management-header,.pay-header,.bill-ui-header,.visitor-header,.rent-header,.complaint-ui-header,.notification-header,.report-header,.movement-header){display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:4px;min-height:62px}
+:is(.pg-management-header,.room-header,.res-header,.allocation-management-header,.pay-header,.bill-ui-header,.visitor-header,.rent-header,.complaint-ui-header,.notification-header,.report-header,.movement-header) h1{font-size:clamp(23px,2.1vw,28px)!important;letter-spacing:-.8px!important;color:var(--module-ink)!important;font-weight:750!important;line-height:1.2}
+:is(.pg-management-header,.room-header,.res-header,.allocation-management-header,.pay-header,.bill-ui-header,.visitor-header,.rent-header,.complaint-ui-header,.notification-header,.report-header,.movement-header) p{color:var(--module-muted)!important;font-size:13px!important;margin-top:7px!important}
+:is(.pg-management-icon,.room-icon,.res-header-icon,.allocation-management-icon,.pay-icon,.bill-ui-icon,.visitor-icon,.complaint-ui-icon,.notification-icon,.report-icon){height:45px!important;width:45px!important;font-size:19px!important;border-radius:12px!important;box-shadow:none!important;background:#e9efff!important;color:var(--module-blue)!important;flex-shrink:0}
+/* Card rhythm, headings and uniform fields */
+:is(.pg-management-card,.room-card,.availability-card,.res-card,.allocation-management-card,.pay-card,.bill-ui-card,.visitor-card,.visitor-table-card,.rent-card,.rent-stat-card,.complaint-ui-card,.notification-card,.report-card,.collection-card,.team-panel,.owner-card){background:var(--module-panel)!important;border:1px solid var(--module-stroke)!important;box-shadow:var(--module-shadow)!important;border-radius:var(--module-radius)!important;padding:clamp(17px,2vw,24px)!important}
+:is(.pg-management-title,.card-title,.res-card-title,.allocation-management-title,.pay-title,.bill-ui-title,.visitor-title,.complaint-ui-title,.section-title){gap:12px!important;margin-bottom:19px!important}
+:is(.pg-management-title,.card-title,.res-card-title,.allocation-management-title,.pay-title,.bill-ui-title,.visitor-title,.complaint-ui-title,.section-title) h2,
+:is(.pg-management-title,.card-title,.res-card-title,.allocation-management-title,.pay-title,.bill-ui-title,.visitor-title,.complaint-ui-title,.section-title) h3{font-size:16px!important;color:var(--module-ink)!important;font-weight:700!important;letter-spacing:-.25px}
+:is(.pg-management-page,.room-page,.res-page,.allocation-management-page,.pay-page,.bill-ui-page,.visitor-page,.rent-container,.complaint-ui-page,.notification-page,.report-page) input:not([type="checkbox"]):not([type="radio"]),
+:is(.pg-management-page,.room-page,.res-page,.allocation-management-page,.pay-page,.bill-ui-page,.visitor-page,.rent-container,.complaint-ui-page,.notification-page,.report-page) select,
+:is(.pg-management-page,.room-page,.res-page,.allocation-management-page,.pay-page,.bill-ui-page,.visitor-page,.rent-container,.complaint-ui-page,.notification-page,.report-page) textarea{min-height:43px;font-family:inherit;font-size:13px;color:var(--module-ink);border-color:#e2e8f3;border-radius:9px;box-shadow:none}
+:is(.pg-management-page,.room-page,.res-page,.allocation-management-page,.pay-page,.bill-ui-page,.visitor-page,.rent-container,.complaint-ui-page,.notification-page,.report-page) :is(input,textarea,select):focus{outline:none;border-color:#4675ed!important;box-shadow:0 0 0 3px rgba(53,101,223,.1)!important}
+:is(.pg-management-page,.room-page,.res-page,.allocation-management-page,.pay-page,.bill-ui-page,.visitor-page,.rent-container,.complaint-ui-page,.notification-page,.report-page) :is(input,textarea)::placeholder{color:#9aa8bf;opacity:1}
+:is(.pg-management-btn,.room-btn,.res-btn,.allocation-management-btn,.pay-btn,.bill-ui-primary,.visitor-primary-btn,.complaint-ui-primary,.send-btn,.generate-btn,.download-btn){background:var(--module-blue)!important;color:#fff!important;border-radius:9px!important;min-height:41px;display:inline-flex;align-items:center;justify-content:center;gap:8px;box-shadow:none!important;font-weight:650!important;font-size:13px!important;padding:10px 16px!important;border:0;cursor:pointer}
+:is(.pg-management-btn,.room-btn,.res-btn,.allocation-management-btn,.pay-btn,.bill-ui-primary,.visitor-primary-btn,.complaint-ui-primary,.send-btn,.generate-btn,.download-btn):hover{background:#2856ca!important}
+/* Shared table surfaces; preserve existing column data and actions */
+:is(.pg-management-table-wrapper,.room-table-wrapper,.res-table-wrapper,.allocation-management-table-wrapper,.pay-table-wrapper,.bill-ui-table-wrapper,.visitor-table-card,.complaint-table-wrapper,.rent-table-wrapper){overflow-x:auto;max-width:100%;border:1px solid var(--module-stroke);border-radius:12px;background:#fff}
+:is(.pg-management-page,.room-page,.res-page,.allocation-management-page,.pay-page,.bill-ui-page,.visitor-page,.rent-container,.complaint-ui-page,.report-page) table{width:100%;border-collapse:collapse;min-width:580px;font-size:13px;color:#425271}
+:is(.pg-management-page,.room-page,.res-page,.allocation-management-page,.pay-page,.bill-ui-page,.visitor-page,.rent-container,.complaint-ui-page,.report-page) th{background:#f8faff!important;text-align:left!important;padding:14px 17px!important;color:#657494!important;font-size:11px!important;font-weight:700!important;text-transform:uppercase;letter-spacing:.55px;white-space:nowrap;border-bottom:1px solid #e8edf5}
+:is(.pg-management-page,.room-page,.res-page,.allocation-management-page,.pay-page,.bill-ui-page,.visitor-page,.rent-container,.complaint-ui-page,.report-page) td{padding:15px 17px!important;border-bottom:1px solid #f0f3f9!important;vertical-align:middle}
+:is(.pg-management-page,.room-page,.res-page,.allocation-management-page,.pay-page,.bill-ui-page,.visitor-page,.rent-container,.complaint-ui-page,.report-page) tr:last-child td{border-bottom:0!important}
+:is(.pg-management-page,.room-page,.res-page,.allocation-management-page,.pay-page,.bill-ui-page,.visitor-page,.rent-container,.complaint-ui-page,.report-page) tbody tr:hover{background:#fafcff}
+/* Purpose-built Properties page */
+.modern-module{display:flex;flex-direction:column;gap:20px}
+.module-header{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.module-eyebrow{font-size:10px;letter-spacing:1.15px;font-weight:750;color:#5c79c4}
+.module-header h1{font-size:29px;letter-spacing:-.85px;margin:6px 0;color:var(--module-ink);line-height:1.2}
+.module-header p,.module-panel-header p{font-size:13px;color:var(--module-muted)}
+.module-primary,.module-secondary{appearance:none;border:0;border-radius:9px;padding:11px 17px;display:inline-flex;justify-content:center;align-items:center;gap:8px;font-weight:700;font-size:12px;cursor:pointer;min-height:42px;font-family:inherit}
+.module-primary{background:var(--module-blue);color:white}.module-primary:hover{background:#2755c6}
+.module-secondary{border:1px solid #dfe6f1;color:#425373;background:#fff}.module-secondary:hover{background:#f5f8fe}
+.module-primary:disabled,.module-secondary:disabled{opacity:.6;cursor:wait}
+.module-summary-strip{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.module-summary-strip>div{display:flex;align-items:center;gap:13px;background:#fff;border:1px solid var(--module-stroke);border-radius:13px;padding:18px 20px}
+.module-stat-icon{width:42px;height:42px;display:grid;place-items:center;background:#ecf1ff;color:var(--module-blue);border-radius:11px;font-size:19px}
+.module-summary-strip small{display:block;font-size:12px;color:#8090aa}.module-summary-strip strong{font-size:23px;font-weight:750;color:var(--module-ink)}
+.module-panel{border:1px solid var(--module-stroke);background:#fff;border-radius:15px;box-shadow:var(--module-shadow);overflow:hidden}
+.module-panel-header{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:21px 22px;border-bottom:1px solid #edf1f7}
+.module-panel-header h2{font-size:16px;margin-bottom:3px;color:var(--module-ink)}
+.module-search{display:flex;align-items:center;gap:9px;border:1px solid #e2e8f2;padding:0 12px;border-radius:9px;color:#8797b0;min-width:230px}
+.module-search input{border:0!important;box-shadow:none!important;outline:0!important;min-height:39px!important;width:100%;background:transparent;font-size:12px}
+.module-table-scroll{overflow-x:auto}.module-table{width:100%;border-collapse:collapse;min-width:600px}
+.module-item-name{display:inline-flex;align-items:center;gap:10px;font-weight:650;color:#263755}.module-item-name i{width:32px;height:32px;border-radius:8px;background:#eaf0ff;color:var(--module-blue);display:grid;place-items:center}
+.module-number-pill{display:inline-block;border-radius:7px;background:#eff4ff;color:#355fc5;padding:4px 11px;font-weight:700}.module-id{color:#91a0b4;font-size:12px}
+.module-table-footer{padding:14px 22px;font-size:12px;color:#8290aa;background:#fcfdff;border-top:1px solid #edf1f7}
+.module-empty{min-height:190px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:9px;color:#8d9bb2;font-size:13px;padding:25px;text-align:center}.module-empty>i{font-size:26px;color:#a8b8da}.module-empty strong{font-size:15px;color:#354868}
+.module-notice,.module-error{padding:12px 16px;border-radius:10px;font-size:13px;display:flex;align-items:center;justify-content:space-between;gap:12px}.module-notice{background:#edf9f3;color:#167348;border:1px solid #bee6d0}.module-error{background:#fff2f1;color:#b83d3d;border:1px solid #f5ceca}.module-notice button,.module-error button{border:0;background:transparent;color:inherit;cursor:pointer;font-weight:700}
+.module-modal-backdrop{position:fixed;inset:0;z-index:3000;background:rgba(10,23,53,.54);display:flex;align-items:center;justify-content:center;padding:20px}
+.module-modal{width:min(100%,520px);max-height:calc(100dvh - 32px);overflow-y:auto;background:#fff;border-radius:17px;box-shadow:0 28px 75px rgba(7,18,46,.25)}
+.module-modal-header{display:flex;align-items:flex-start;justify-content:space-between;padding:24px 26px;border-bottom:1px solid #edf0f7}.module-modal-header h2{font-size:20px;color:var(--module-ink)}.module-modal-header p{font-size:13px;color:var(--module-muted);margin-top:5px}
+.module-close{border:0;border-radius:7px;width:30px;height:30px;background:#f3f6fc;color:#4c5c78;cursor:pointer}
+.module-modal-body{padding:24px 26px;display:grid;gap:17px}.module-modal-body label{font-size:12px;color:#344565;font-weight:650;display:flex;flex-direction:column;gap:7px}.module-modal-body input,.module-modal-body textarea{background:#fff;display:block;width:100%;border:1px solid #dce4f1!important;border-radius:9px;padding:11px 12px;font-size:13px;resize:vertical;font-family:inherit}
+.module-modal-footer{padding:18px 26px;background:#fbfcff;border-top:1px solid #edf0f7;display:flex;justify-content:flex-end;gap:10px}
+@media(max-width:700px){.module-summary-strip{grid-template-columns:1fr}.module-header{align-items:flex-start}.module-header .module-primary{width:100%}.module-search{width:100%}.module-panel-header{padding:17px}.module-modal-header,.module-modal-body,.module-modal-footer{padding-left:18px;padding-right:18px}}

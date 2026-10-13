@@ -1,0 +1,471 @@
+/* =========================
+ABOUT PAGE
+========================= */
+
+.about-page{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+    max-width:100%;
+
+    padding-bottom:40px;
+
+}
+
+
+
+/* HEADER */
+
+.about-header h1{
+
+    color:var(--text);
+
+    font-size:36px;
+
+    font-weight:700;
+
+    letter-spacing:-0.5px;
+
+    margin:0;
+
+}
+
+
+
+.about-header p{
+
+    color:var(--muted);
+
+    margin-top:10px;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+}
+
+
+
+/* CARD */
+
+.about-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    padding:32px;
+
+    transition:.25s ease;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.04);
+
+}
+
+
+
+.about-card:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+
+
+/* HERO */
+
+.about-hero{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:24px;
+
+}
+
+
+
+.about-hero-icon{
+
+    height:72px;
+
+    width:72px;
+
+    flex-shrink:0;
+
+    border-radius:18px;
+
+    background:var(--primary-light);
+
+    color:var(--primary);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:32px;
+
+}
+
+
+
+.about-hero h2{
+
+    color:var(--heading);
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin:0 0 8px;
+
+}
+
+
+
+.about-hero p{
+
+    color:var(--muted);
+
+    font-size:14.5px;
+
+    line-height:1.7;
+
+    max-width:640px;
+
+}
+
+
+
+.about-version{
+
+    display:inline-block;
+
+    margin-top:14px;
+
+    background:var(--primary-light);
+
+    color:var(--primary);
+
+    font-size:12.5px;
+
+    font-weight:700;
+
+    padding:6px 14px;
+
+    border-radius:999px;
+
+}
+
+
+
+/* TITLE */
+
+.about-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    margin-bottom:26px;
+
+}
+
+
+
+.about-title i{
+
+    height:46px;
+
+    width:46px;
+
+    border-radius:14px;
+
+    background:var(--primary-light);
+
+    color:var(--primary);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:21px;
+
+}
+
+
+
+.about-title h3{
+
+    color:var(--text);
+
+    margin:0;
+
+    font-size:21px;
+
+    font-weight:650;
+
+}
+
+
+
+.about-title p{
+
+    color:var(--muted);
+
+    margin:5px 0 0;
+
+    font-size:14px;
+
+}
+
+
+
+/* FEATURES GRID */
+
+.about-features-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+
+
+.about-feature{
+
+    display:flex;
+
+    gap:14px;
+
+    padding:18px;
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    transition:.2s;
+
+}
+
+
+
+.about-feature:hover{
+
+    border-color:var(--primary);
+
+    background:var(--primary-light);
+
+}
+
+
+
+.about-feature-icon{
+
+    height:40px;
+
+    width:40px;
+
+    flex-shrink:0;
+
+    border-radius:12px;
+
+    background:var(--sidebar);
+
+    color:var(--primary);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:17px;
+
+}
+
+
+
+.about-feature h4{
+
+    color:var(--text);
+
+    font-size:15px;
+
+    font-weight:650;
+
+    margin:0 0 4px;
+
+}
+
+
+
+.about-feature p{
+
+    color:var(--muted);
+
+    font-size:13.5px;
+
+    line-height:1.6;
+
+    margin:0;
+
+}
+
+
+
+/* STACK GRID */
+
+.about-stack-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:16px;
+
+}
+
+
+
+.about-stack-item{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+    padding:16px;
+
+    background:var(--sidebar);
+
+    border-radius:14px;
+
+}
+
+
+
+.about-stack-label{
+
+    color:var(--muted);
+
+    font-size:12.5px;
+
+    font-weight:600;
+
+    text-transform:uppercase;
+
+    letter-spacing:.4px;
+
+}
+
+
+
+.about-stack-value{
+
+    color:var(--text);
+
+    font-size:14.5px;
+
+    font-weight:650;
+
+}
+
+
+
+/* SUPPORT */
+
+.about-support-text{
+
+    color:var(--muted);
+
+    font-size:14.5px;
+
+    line-height:1.7;
+
+}
+
+
+
+.about-support-text a{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    text-decoration:none;
+
+}
+
+
+
+.about-support-text a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .about-stack-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+
+@media(max-width:700px){
+
+    .about-page{
+
+        padding:0 10px;
+
+    }
+
+    .about-card{
+
+        padding:22px;
+
+    }
+
+    .about-features-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .about-hero{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+}

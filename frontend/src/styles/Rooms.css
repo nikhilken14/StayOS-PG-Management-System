@@ -1,0 +1,410 @@
+/* =========================
+   ROOM PAGE
+========================= */
+
+.room-page{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+    max-width:100%;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.room-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.room-header h1{
+    color:var(--text);
+    font-size:36px;
+    margin:0;
+    font-weight:700;
+}
+
+.room-header p{
+    color:var(--muted);
+    margin-top:8px;
+}
+
+.room-icon{
+    height:55px;
+    width:55px;
+    background:rgba(59,130,246,.12);
+    color:var(--primary);
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+    box-shadow:0 8px 20px rgba(59,130,246,.15);
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.room-card,
+.availability-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:25px;
+    transition:.25s;
+    box-shadow:var(--shadow);
+}
+
+.room-card:hover,
+.availability-card:hover{
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+}
+
+/* =========================
+   CARD TITLE
+========================= */
+
+.card-title{
+    display:flex;
+    gap:15px;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.card-title i{
+    background:rgba(59,130,246,.12);
+    color:var(--primary);
+    padding:12px;
+    border-radius:12px;
+    font-size:18px;
+}
+
+.card-title h3{
+    color:var(--text);
+    margin:0;
+}
+
+.card-title p{
+    color:var(--muted);
+    margin-top:4px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.room-form{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.room-form input,
+.edit-modal input{
+    background:var(--surface);
+    border:1px solid var(--border);
+    padding:13px;
+    border-radius:12px;
+    color:var(--text);
+    outline:none;
+    transition:.2s;
+    width:100%;
+}
+
+.room-form input:focus,
+.edit-modal input:focus{
+    border-color:var(--primary);
+    box-shadow:0 0 0 3px rgba(59,130,246,.12);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.room-btn{
+    margin-top:20px;
+    background:var(--primary);
+    border:none;
+    color:white;
+    padding:12px 25px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.2s;
+}
+
+.room-btn:hover{
+    background:var(--primary-hover);
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title{
+    color:var(--text);
+    margin:0;
+}
+
+/* =========================
+   TABLES
+========================= */
+
+.room-table-wrapper{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:18px;
+    overflow:hidden;
+    overflow-x:auto;
+    box-shadow:var(--shadow);
+}
+
+.room-table{
+    width:100%;
+    min-width:900px;
+    border-collapse:collapse;
+}
+
+.room-table thead{
+    background:var(--surface);
+}
+
+.room-table th{
+    text-align:left;
+    padding:16px 20px;
+    color:var(--text);
+    font-size:14px;
+    font-weight:600;
+    border-bottom:1px solid var(--border);
+    white-space:nowrap;
+}
+
+.room-table td{
+    padding:16px 20px;
+    color:var(--muted);
+    border-bottom:1px solid var(--border);
+}
+
+.room-table tbody tr{
+    transition:.2s;
+}
+
+.room-table tbody tr:hover{
+    background:rgba(59,130,246,.05);
+}
+
+/* =========================
+   ROOM NAME CELL
+========================= */
+
+.room-name{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--text);
+    font-weight:600;
+}
+
+.room-name i{
+    width:34px;
+    height:34px;
+    border-radius:8px;
+    background:rgba(59,130,246,.12);
+    color:var(--primary);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* =========================
+   TABLE ACTIONS
+========================= */
+
+.table-actions{
+    display:flex;
+    gap:10px;
+}
+
+.table-actions button{
+    border:none;
+    cursor:pointer;
+    border-radius:8px;
+    padding:8px 12px;
+    transition:.2s;
+}
+
+.table-actions .edit{
+    background:#DBEAFE;
+    color:#2563EB;
+}
+
+.table-actions .edit:hover{
+    background:#BFDBFE;
+}
+
+.table-actions .delete{
+    background:#FEE2E2;
+    color:#DC2626;
+}
+
+.table-actions .delete:hover{
+    background:#FECACA;
+}
+
+/* =========================
+   AVAILABILITY
+========================= */
+
+.availability-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.availability-header h2{
+    color:var(--text);
+    margin:0;
+}
+
+.availability-header button{
+    background:var(--primary);
+    border:none;
+    color:white;
+    padding:10px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.availability-header button:hover{
+    background:var(--primary-hover);
+}
+
+/* =========================
+   STATUS BADGES
+========================= */
+
+.available{
+    display:inline-block;
+    padding:6px 14px;
+    border-radius:999px;
+    background:#DCFCE7;
+    color:#15803D;
+    font-size:13px;
+    font-weight:600;
+}
+
+.full{
+    display:inline-block;
+    padding:6px 14px;
+    border-radius:999px;
+    background:#FEE2E2;
+    color:#DC2626;
+    font-size:13px;
+    font-weight:600;
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.room-empty{
+    text-align:center;
+    padding:40px !important;
+    color:var(--muted);
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.35);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:1000;
+}
+
+.edit-modal{
+    background:var(--card);
+    border:1px solid var(--border);
+    padding:30px;
+    border-radius:18px;
+    width:380px;
+    max-width:90%;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    box-shadow:var(--shadow);
+}
+
+.edit-modal h2{
+    color:var(--text);
+    margin:0;
+}
+
+.modal-actions{
+    display:flex;
+    gap:10px;
+}
+
+.modal-actions button{
+    flex:1;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.modal-actions button:first-child{
+    background:#E5E7EB;
+    color:var(--text);
+}
+
+.modal-actions button:first-child:hover{
+    background:#D1D5DB;
+}
+
+.modal-actions button:last-child{
+    background:var(--primary);
+    color:white;
+}
+
+.modal-actions button:last-child:hover{
+    background:var(--primary-hover);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+    .room-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
+
+    .availability-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
+
+    .room-form{
+        grid-template-columns:1fr;
+    }
+
+    .room-table{
+        min-width:800px;
+    }
+}

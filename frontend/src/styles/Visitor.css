@@ -1,0 +1,678 @@
+/* =========================
+VISITOR PAGE
+========================= */
+
+
+.visitor-page{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+    max-width:100%;
+
+}
+
+
+
+/* =========================
+HEADER
+========================= */
+
+
+.visitor-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+
+.visitor-header h1{
+
+    color:var(--text);
+
+    font-size:36px;
+
+    font-weight:700;
+
+    margin:0;
+
+}
+
+
+
+.visitor-header p{
+
+    color:var(--muted);
+
+    margin-top:8px;
+
+}
+
+
+
+.visitor-icon{
+
+    height:55px;
+
+    width:55px;
+
+    border-radius:15px;
+
+    background:var(--primary-light);
+
+    color:var(--primary);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:25px;
+
+}
+
+
+
+/* =========================
+CARD
+========================= */
+
+
+.visitor-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:28px;
+
+    box-shadow:
+
+    0 4px 12px rgba(0,0,0,.04);
+
+    transition:.25s ease;
+
+}
+
+
+
+.visitor-card:hover{
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,.06);
+
+}
+
+
+
+.visitor-card.small{
+
+    padding:22px;
+
+}
+
+
+
+/* =========================
+TITLE
+========================= */
+
+
+.visitor-title{
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.visitor-title i{
+
+    height:42px;
+
+    width:42px;
+
+    background:var(--primary-light);
+
+    color:var(--primary);
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+
+.visitor-title h3{
+
+    color:var(--text);
+
+    margin:0;
+
+}
+
+
+
+.visitor-title p{
+
+    color:var(--muted);
+
+}
+
+
+
+/* =========================
+FORM
+========================= */
+
+
+.visitor-form{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:18px;
+
+}
+
+
+
+.visitor-form input{
+
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    padding:14px;
+
+    border-radius:12px;
+
+    color:var(--text);
+
+    outline:none;
+
+    transition:.2s;
+
+}
+
+
+
+.visitor-form input::placeholder{
+
+    color:var(--muted);
+
+}
+
+
+
+.visitor-form input:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:
+
+    0 0 0 3px rgba(59,130,246,.12);
+
+}
+
+
+
+
+.visitor-primary-btn{
+
+    margin-top:20px;
+
+    background:var(--primary);
+
+    color:white;
+
+    border:none;
+
+    padding:13px 22px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.2s;
+
+}
+
+
+
+.visitor-primary-btn:hover{
+
+    background:var(--primary-hover);
+
+    transform:translateY(-2px);
+
+}
+
+
+
+/* =========================
+SECTION
+========================= */
+
+
+.visitor-section h2{
+
+    color:var(--text);
+
+    font-size:22px;
+
+    display:flex;
+
+    gap:10px;
+
+    align-items:center;
+
+}
+
+
+
+.visitor-section h2 i{
+
+    color:var(--primary);
+
+}
+
+
+
+/* =========================
+VISITOR GRID
+========================= */
+
+
+.visitor-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+
+
+/* =========================
+VISITOR CARD CONTENT
+========================= */
+
+
+.visitor-card-head{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+
+.visitor-card-head h3{
+
+    color:var(--text);
+
+    margin:0;
+
+}
+
+
+
+/* STATUS */
+
+
+.inside,
+
+.left{
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+
+
+.inside{
+
+    background:#DCFCE7;
+
+    color:#16A34A;
+
+}
+
+
+
+.left{
+
+    background:#FEE2E2;
+
+    color:#DC2626;
+
+}
+
+
+
+
+.visitor-info{
+
+    margin-top:18px;
+
+}
+
+
+
+.visitor-info p{
+
+    color:var(--muted);
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+
+
+.visitor-info i{
+
+    color:var(--primary);
+
+}
+
+
+
+/* =========================
+CHECKOUT BUTTON
+========================= */
+
+
+.checkout-btn{
+
+
+    background:var(--danger);
+
+    color:white;
+
+    border:none;
+
+    padding:11px 18px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+
+
+.checkout-btn:hover{
+
+    background:#DC2626;
+
+}
+
+
+
+/* =========================
+RESPONSIVE
+========================= */
+
+
+@media(max-width:900px){
+
+
+    .visitor-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
+    .visitor-form{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
+    .visitor-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:15px;
+
+    }
+
+}
+
+/* =========================
+VISITOR HISTORY TABLE
+========================= */
+
+
+.visitor-table-card{
+
+
+background:var(--card);
+
+border:1px solid var(--border);
+
+border-radius:10px;
+
+padding:25px;
+
+box-shadow:var(--shadow);
+
+overflow-x:auto;
+
+}
+
+
+
+
+
+.visitor-table{
+
+
+width:100%;
+
+border-collapse:collapse;
+
+}
+
+
+
+.visitor-table th{
+
+
+text-align:left;
+
+padding:15px;
+
+font-size:13px;
+
+text-transform:uppercase;
+
+color:var(--muted);
+
+border-bottom:1px solid var(--border);
+
+}
+
+
+
+.visitor-table td{
+
+
+padding:15px;
+
+color:var(--text);
+
+border-bottom:1px solid var(--border);
+
+}
+
+
+
+.visitor-table tbody tr{
+
+
+transition:.2s;
+
+}
+
+
+
+.visitor-table tbody tr:hover{
+
+
+background:var(--primary-light);
+
+}
+
+
+
+
+
+.visitor-inside,
+.visitor-left{
+
+
+padding:6px 12px;
+
+border-radius:20px;
+
+font-size:13px;
+
+font-weight:600;
+
+}
+
+
+
+.visitor-inside{
+
+
+background:#DCFCE7;
+
+color:#16A34A;
+
+}
+
+
+
+.visitor-left{
+
+
+background:#FEE2E2;
+
+color:#DC2626;
+
+}
+
+
+
+
+
+@media(max-width:900px){
+
+
+.visitor-table{
+
+min-width:900px;
+
+}
+
+
+}
+
+/* =========================
+INSIDE TABLE BUTTON
+========================= */
+
+
+.visitor-table .checkout-btn{
+
+
+padding:8px 15px;
+
+font-size:13px;
+
+}
+
+
+
+.visitor-section{
+
+margin-bottom:30px;
+
+}
+
+
+
+.visitor-section h2{
+
+
+margin-bottom:20px;
+
+font-size:22px;
+
+color:var(--text);
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+}
+
+
+.visitor-section h2 i{
+
+color:var(--primary);
+
+}

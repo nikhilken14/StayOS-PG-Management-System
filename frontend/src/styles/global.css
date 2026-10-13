@@ -1,0 +1,219 @@
+/* =========================
+RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/* =========================
+COLOR SYSTEM
+========================= */
+
+:root{
+
+    /* Brand */
+    --primary:#3157d5;
+    --primary-hover:#2445b5;
+    --primary-light:#eef2ff;
+
+
+    /* Background */
+    --bg:#f5f7fb;
+    --sidebar:#fbfcfe;
+    --card:#FFFFFF;
+    --surface:#FFFFFF;
+
+
+    /* Border */
+    --border:#e3e8f0;
+
+
+    /* Text */
+    --text:#344054;
+    --heading:#172033;
+    --muted:#667085;
+    --placeholder:#9CA3AF;
+
+
+    /* Status */
+    --success:#22C55E;
+    --warning:#F59E0B;
+    --danger:#EF4444;
+
+
+    /* Shadow */
+    --shadow:0 8px 24px rgba(26, 42, 78, 0.06);
+    --shadow-md:0 12px 30px rgba(26, 42, 78, 0.09);
+
+}
+
+
+
+/* =========================
+GLOBAL
+========================= */
+
+html,
+body,
+#root{
+
+    height:100%;
+    width:100%;
+
+}
+
+
+
+body{
+
+    font-family:
+    Inter,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+
+    background:var(--bg);
+
+    color:var(--text);
+
+
+    -webkit-font-smoothing:antialiased;
+
+    text-rendering:optimizeLegibility;
+    line-height:1.5;
+
+}
+
+
+
+/* =========================
+ELEMENT RESET
+========================= */
+
+button,
+input,
+textarea,
+select{
+
+    font-family:inherit;
+
+    color:var(--text);
+
+}
+
+
+
+button{
+
+    cursor:pointer;
+
+    border:none;
+
+    background:none;
+
+}
+
+
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible{
+
+    outline:2px solid var(--primary);
+
+    outline-offset:2px;
+
+}
+
+
+
+input,
+textarea,
+select{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:8px;
+
+}
+
+
+
+input::placeholder,
+textarea::placeholder{
+
+    color:var(--placeholder);
+
+}
+
+button:disabled{opacity:.55;cursor:not-allowed}
+
+@media (max-width: 760px){
+  .content{padding:16px}
+  .navbar{height:64px;padding:0 14px}
+  .sidebar.open{width:220px}
+  .sidebar-menu,.sidebar-bottom{padding:12px}
+}
+
+
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+
+/* =========================
+COMMON STATES
+========================= */
+
+
+.hover-effect:hover{
+
+    background:var(--primary-light);
+
+    color:var(--primary);
+
+}
+
+
+
+.primary-btn{
+
+    background:var(--primary);
+
+    color:#FFFFFF;
+
+}
+
+
+
+.primary-btn:hover{
+
+    background:var(--primary-hover);
+
+}
+
+
+
+.card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+}
